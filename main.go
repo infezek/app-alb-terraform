@@ -38,7 +38,7 @@ func main() {
 
 	port := os.Getenv("PORT")
 	if port == "" {
-		panic("PORT env var is required")
+		port = "80"
 	}
 	slog.Info(fmt.Sprintf("Listening on port %s", port))
 	if err := http.ListenAndServe(fmt.Sprintf(":%s", port), nil); err != nil {
