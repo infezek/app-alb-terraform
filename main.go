@@ -38,7 +38,7 @@ func main() {
 
 	port := os.Getenv("PORT")
 	if port == "" {
-		port = "80"
+		port = "8080"
 	}
 	slog.Info(fmt.Sprintf("Listening on port %s", port))
 	if err := http.ListenAndServe(fmt.Sprintf(":%s", port), nil); err != nil {
