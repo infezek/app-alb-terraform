@@ -1,0 +1,17 @@
+[Unit]
+Description=Simple HTTP Server
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Туре=ехес
+User=ubuntu
+ExecStart=/home/ubuntu/serve
+Environment=PATH=/usr/local/bin:/usr/bin:/bin
+Environment=PORT=80
+
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
